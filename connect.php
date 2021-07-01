@@ -1,16 +1,10 @@
 <?php
-//$con=mysqli_connect("sql6.freesqldatabase.com","sql6422177","dKNFHXkf6Z","sql6422177");
-$servername = "sql6.freesqldatabase.com";
-$username = "sql6422177";
-$password = "dKNFHXkf6Z";
-
-// Create connection
-$con = new mysqli($servername, $username, $password);
+$mysqli = new mysqli("sql6.freesqldatabase.com","sql6422177","dKNFHXkf6Z","sql6422177");
 
 // Check connection
-if ($con->connect_error) {
-  die("Connection failed: " . $con->connect_error);
+if ($mysqli -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  exit();
 }
-echo "Connected successfully";
 ?>
 
